@@ -1,0 +1,62 @@
+.advantage {
+  min-height: 473px;
+  padding: 73px 0 83px;
+  background-color: #f6f6f6;
+  &__cards {
+    display: flex;
+    justify-content: 
+    space-between;
+    align-items: start;
+  }
+  &__card {
+    flex: 1 1 33.33%;
+    @include flexCenter;
+    flex-direction: column;
+    color: #0D0D0D;
+    text-align: center;
+    &-title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    &-description {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 18px;
+      &_red {
+        color:#F00;
+      }
+    }
+  }
+  &__card:not(:nth-child(3n)) {
+    margin-right: 65px;
+  }
+  &__card-img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__card-img_1 {
+    background-image: url('../../icons/cup.svg')
+  }
+  &__card-img_2 {
+    background-image: url('../../icons/heart.svg')
+  }
+  &__card-img_3 {
+    background-image: url('../../icons/shoe.svg')
+  }
+}
+.section-title {
+  margin-bottom: 65px;
+  color: #0D0D0D;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1; 
+}

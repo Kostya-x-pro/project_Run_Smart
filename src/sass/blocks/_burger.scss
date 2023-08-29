@@ -1,0 +1,33 @@
+.burger-menu {
+  display: none;
+  padding: 5px;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+    span {
+      background-color: $main-color;
+    }
+  }
+  span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #fff; 
+    transition: all .3s ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &_active {
+    span:nth-child(1) {
+      margin: 0;
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-3px) translateX(2px);
+    }
+  }
+}

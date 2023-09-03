@@ -42,21 +42,12 @@
     background-position: center;
   }
   &__card-img_1 {
-    background-image: url('../../icons/cup.svg')
+    background-image: url('../icons/cup.svg')
   }
   &__card-img_2 {
-    background-image: url('../../icons/heart.svg')
+    background-image: url('../icons/heart.svg')
   }
   &__card-img_3 {
-    background-image: url('../../icons/shoe.svg')
+    background-image: url('../icons/shoe.svg')
   }
-}
-.section-title {
-  margin-bottom: 65px;
-  color: #0D0D0D;
-  text-align: center;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1; 
 }

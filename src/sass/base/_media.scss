@@ -4,6 +4,11 @@
       align-items: center;
     }
   }
+  .section-title {
+    &_left {
+      font-size: 30px;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -38,7 +43,28 @@
     padding: 53px 0 63px;
   }
   .section-title {
-  font-size: 28px;
+    font-size: 28px;
+    &_left {
+      font-size: 28px;
+    }
+  }
+  .carusel {
+    &__inner{
+      width: 100%;
+      .slick-next {
+        right: 0;
+        opacity: .5;
+        z-index: 1;
+      }
+      .slick-prev {
+        left: 0;
+        opacity: .5;
+        z-index: 1;
+      }
+    }
+    .slick-slide img {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -77,6 +103,42 @@
   .section-title {
     margin-bottom: 30px;
     }
+
+  .consultation {
+    padding: 60px 0;
+  }
+  .feed-form {
+    align-items: center;
+    width: 100%;
+  } 
+  .button{
+    &_submit{
+      max-width: 232px;
+      font-size: 14px;
+    }
+  }
+  .carusel{
+    padding: 40px 0;
+    &__inner {
+      ul{
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+        gap: 25px;
+        button {
+          border-radius: 100%;
+          border: none;
+          background-color: $main-color;
+          outline: 1px solid rgb(0, 0, 0);
+          width: 25px;
+          height: 25px;
+          font-size: 0; 
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -148,6 +210,43 @@
       padding-bottom: 15px;
       flex-basis: 98%;
       border-bottom: 1px solid $main-color;
+    }
+  }
+  .section-title {
+    &_left {
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 28px;
+    }
+  }
+  .consultation{
+    min-height: 555px;
+    padding: 30px;
+    &__descr {
+      text-align: center;
+      line-height: 1;
+    }
+  }
+  .feed-form {
+    input{
+      height: 45px;
+      margin-top: 15px;
+    }
+    .button_submit {
+      max-width: 232px;
+      max-height: 40px
+    }
+  }
+  .carusel {
+    padding: 30px 0;
+    &__inner{
+      ul{
+        gap: 20px;
+        button {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 

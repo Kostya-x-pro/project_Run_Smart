@@ -24,7 +24,7 @@
 
     .header {
       &__logo {
-        width: 220px;
+        max-width: 220px;
       }
       &__phone {
         font-size: 16px;
@@ -66,6 +66,16 @@
       margin: 0 auto;
     }
   }
+  .catalog{
+    &__content {
+      justify-content: center;
+    }
+    &-item {
+      flex-basis: 48%;
+      // max-width: 280px;
+    }
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -116,6 +126,11 @@
       max-width: 232px;
       font-size: 14px;
     }
+    &_mini {
+      width: 110px;
+      height: 35px;
+      font-size: 12px;
+    }
   }
   .carusel{
     padding: 40px 0;
@@ -139,6 +154,28 @@
       }
     }
   }
+  .catalog{
+    &__tabs {
+      gap: 8px;
+      margin-top: 30px;
+    }
+    &__tab {
+      max-width: 150px;
+      max-height: 40px;
+      font-size: 16px;
+      line-height: 1;
+    }
+    &-item {
+      margin-bottom: 0;
+      &__old-price {
+        font-size: 12px;
+      }
+      &__price {
+        font-size: 18px;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -246,6 +283,46 @@
           width: 20px;
           height: 20px;
         }
+      }
+    }
+  }
+  .catalog {
+    &__tabs {
+      gap: 5px;
+    }
+    &__tab {
+      max-width: 90px;
+      font-size: 12.5px;
+    }
+
+    &__content {
+      margin-top: 20px;
+      gap: 5px;
+    }
+    &-item {
+      flex-basis: 100%;
+    }
+  }
+  .review {
+    padding-bottom: 20px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 0 12px;
+      border-bottom: 1px solid $main-color;
+    }
+    &__customer {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 165px;
+      height: auto;
+    }
+    &__info {
+      &-title {
+        padding-top: 20px;
       }
     }
   }

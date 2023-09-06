@@ -39,12 +39,50 @@ window.addEventListener('DOMContentLoaded', () => {
     togleSlide('.catalog-item__link');
     togleSlide('.catalog-item__back');
 
-  //Bureger menu
-  const burgerBtn = document.querySelector('#burger');
-
-  burgerBtn.addEventListener('click', () => {
-    burgerBtn.classList.toggle('burger-menu_active');
+  // modal
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    });
   });
 
+    // validate forms
+  validateForms('#consultation-form');
+  validateForms('#order form');
+  validateForms('#consultation form');
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: 'required',
+        email: {
+          required: true,
+          email: true,
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйств введите своё имя",
+          minlength: jQuery.validator.format("Введите {0} символов!")
+        },
+        phone: "Пожалуйств введите свой номер телефона",
+        email: {
+          required: "Введите свою почту",
+          email: "Неверно введён адрес почты"
+        }
+      }
+    });
+  }
 
 });

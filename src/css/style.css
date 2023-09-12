@@ -28,6 +28,34 @@
   font-weight: 400;
   font-style: normal;
 }
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 * {
   font-family: "MuseoModerno";
 }
@@ -257,6 +285,16 @@ p {
 }
 .advantage__card-img_2 {
   background-image: url("../icons/heart.svg");
+}
+.advantage__card-img_2-animated {
+  -webkit-animation-name: heartbeat;
+          animation-name: heartbeat;
+  -webkit-animation-duration: 1.75s;
+          animation-duration: 1.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 .advantage__card-img_3 {
   background-image: url("../icons/shoe.svg");
@@ -536,6 +574,10 @@ p {
   padding-right: 20px;
   padding-left: 15px;
   margin-bottom: 0;
+}
+.catalog-item__list ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 .catalog-item__list_active {
@@ -683,6 +725,9 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.footer iframe {
+  width: 100%;
+}
 
 .overlay {
   display: none;
@@ -742,6 +787,18 @@ p {
 
 #consultation, #order, #thanks {
   display: none;
+}
+
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.pageup img {
+  width: 100%;
 }
 
 @media (max-width: 1199px) {

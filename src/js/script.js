@@ -84,5 +84,43 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // masked input (opcional)
+  $('input[name=phone]').mask("(+7) 999-9999");
+
+  // send form from mallerPHP
+  $('form').submit((e) => {
+    e.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
+  // btn page up, smoth scroll
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $("a[href=#up]").click(function() {
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  // animate + wow.js
+  new WOW().init();
 
 });

@@ -42,12 +42,18 @@
     background-position: center;
   }
   &__card-img_1 {
-    background-image: url('../icons/cup.svg')
+    background-image: url('../icons/cup.svg');
   }
   &__card-img_2 {
-    background-image: url('../icons/heart.svg')
+    background-image: url('../icons/heart.svg');
+    &-animated {
+      animation-name: heartbeat;
+      animation-duration: 1.75s;
+      animation-iteration-count: infinite; 
+      animation-timing-function: ease;
+    }
   }
   &__card-img_3 {
-    background-image: url('../icons/shoe.svg')
+    background-image: url('../icons/shoe.svg');
   }
 }

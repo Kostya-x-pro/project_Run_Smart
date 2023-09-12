@@ -45,4 +45,7 @@
   &__social {
     @include flexCenter;
   }
+  iframe {
+    width: 100%;
+  }
 }
